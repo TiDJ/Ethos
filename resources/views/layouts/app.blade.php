@@ -42,18 +42,48 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('home') }}">{{ __('Acceuil |') }}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('objectif') }}">{{ __('Nos objectif |') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('profil') }}">{{ __('Profil recherché |') }}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('contact') }}">{{ __('Nous Contacter |') }}</a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Se connecter') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __("S'enregistrer") }}</a>
                         </li>
                         @endif
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('objectif') }}">{{ __('objectif') }}</a>
+                            <a class="nav-link" href="{{ route('home') }}">{{ __('Acceuil |') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('actu') }}">{{ __('Actualité membre |') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('objectif') }}">{{ __('Nos objectif |') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('profil') }}">{{ __('Profil recherché |') }}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('contact') }}">{{ __('Nous Contacter |') }}</a>
+                        </li>
+
+
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
