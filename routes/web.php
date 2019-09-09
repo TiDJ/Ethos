@@ -17,6 +17,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// Articles
+Route::prefix('backoffice')->middleware('auth', 'checkAdmin')->group(function () { // 
+    Route::resource('posts', 'PostController');
+    Route::resource('comments', 'CommentController')->except([
+        'create', 'store', 'update'
+    ]);
+});
+
+Route::post('comments/store', 'HomeController@store')->middleware('auth')->name('comments.store');
+
+
+
+Route::get('/actualite/{slug}', 'HomeController@article')->name('posts.article');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/objectif', 'HomeController@objectif')->name('objectif');
 Route::get('/admin', 'AdminController@index')->name('admin.index')->middleware('auth');

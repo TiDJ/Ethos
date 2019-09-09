@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
+use App\Http\Requests\CommentRequest;
+use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -12,9 +16,7 @@ class HomeController extends Controller
      * @return void
      */
     public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    { }
 
     /**
      * Show the application dashboard.
@@ -53,7 +55,37 @@ class HomeController extends Controller
      */
     public function actu()
     {
-        return view('pages.actu');
+        $posts = Post::orderBy('created_at', 'desc')->get();
+        return view('pages.actu', [
+            'posts' => $posts
+        ]);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(CommentRequest $request)
+    {
+        $data = $request->validated();
+        $comment = new Comment;
+        $comment->content = $data['content'];
+        $comment->post_id = $data['post_id'];
+        $comment->user_id = auth()->user()->id;
+        $comment->save();
+        Session::flash('status', 'Votre commentaire a bien été pris en compte');
+        return back();
+    }
+
+    public function article($slug) // mon-titre
+    {
+        $post = Post::where('slug', '=', $slug)->first();
+
+        return view('pages.article', [
+            'post' => $post
+        ]);
     }
 
     /**

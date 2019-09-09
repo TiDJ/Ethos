@@ -52,6 +52,13 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'bio' => ['nullable', 'string'],
+            'main_name' => ['required', 'string'],
+            'main_class' => ['required', 'string'],
+            'main_role' => ['required', 'string'],
+            'reroll_name' => ['nullable', 'string'],
+            'reroll_class' => ['nullable', 'string'],
+            'reroll_role' => ['nullable', 'string'],
         ]);
     }
 
@@ -67,6 +74,14 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'bio' => $data['bio'],
+            'main_name' => $data['main_name'],
+            'main_class' => $data['main_class'],
+            'main_role' => $data['main_role'],
+            'reroll_name' => $data['reroll_name'],
+            'reroll_class' => $data['reroll_class'],
+            'reroll_role' => $data['reroll_role'],
+            'isAdmin' => false
         ]);
     }
 }

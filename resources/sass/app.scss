@@ -1,8 +1,16 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Oleo+Script:400,700");
+@import url("https://fonts.googleapis.com/css?family=Teko:400,700");
+@import url("https://fonts.googleapis.com/css?family=Modak&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabin&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+// Mes fichiers perso a charger en dernier !important
+@import "home";
