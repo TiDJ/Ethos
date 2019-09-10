@@ -16,12 +16,15 @@ class UsersTableSeeder extends Seeder
             'email' => 'rslokiju@gmail.com',
             'password' => bcrypt('julien59700'),
             'isAdmin' => true,
-            'created_at' => now(),
+'main_class' => 'Chasseur',
+'main_role' => 'Dps',
+'main_name' => 'Kisara',            
+'created_at' => now(),
             'email_verified_at' => now(),
 
         ]);
 
-        DB::table('users')->insert([
+        /*DB::table('users')->insert([
             'name' => 'Ibra',
             'email' => 'ibraziata7@gmail.com',
             'password' => bcrypt('ibraziata7'),
@@ -29,6 +32,6 @@ class UsersTableSeeder extends Seeder
             'created_at' => now(),
             'email_verified_at' => now(),
 
-        ]);
+        ]);*/
     }
 }
