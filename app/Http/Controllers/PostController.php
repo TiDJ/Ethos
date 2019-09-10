@@ -89,6 +89,7 @@ class PostController extends Controller
         $post->slug = $postData['slug'];
         $post->content = $postData['content'];
         $post->summary = $postData['summary'];
+        $post->created_at = $postData['created_at'];
         $post->user_id = Auth::user()->id;
         $post->save();
         Session::flash('status', 'Article bien modifié');

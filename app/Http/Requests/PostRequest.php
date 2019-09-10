@@ -29,6 +29,7 @@ class PostRequest extends FormRequest
             'slug' => 'required|max:100',
             'summary' => 'required|max:255',
             'content' => 'required|max:10000',
+            'created_at' => 'nullable|max:20',
         ];
     }
 }

@@ -35,10 +35,13 @@
                                 <input value="@if(old('title')) {{old('title')}} @else {{ $post->title }} @endif" placeholder="Titre" name="title" type="text" class="form-control">
                             </div>
                             <div class="col-md-12 mb-3">
-                                <label for="title">slug</label>
+                                <label for="title">Slug</label>
                                 <input value="@if(old('slug')) {{old('slug')}} @else {{ $post->slug }} @endif" placeholder="slug" name="slug" type="text" class="form-control">
                             </div>
-
+                            <div class="col-md-12 mb-3">
+                                <label for="title">Date de Création</label>
+                                <input value="@if(old('created_at')) {{old('created_at')}} @else {{ $post->created_at }} @endif" placeholder="created_at" name="created_at" type="text" class="form-control">
+                            </div>
                             <div class="col-md-12 mb-3">
                                 <label for="title">Résumé</label>
                                 <input value="@if(old('summary')) {{old('summary')}} @else {{ $post->summary }} @endif" placeholder="summary" name="summary" type="text" class="form-control">
