@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center backcolor">
         <div class="col-md-8 ">
-            <h1>PROFIL RECHERCHÉ</h1>
+            <h1>PROFILS RECHERCHÉS</h1>
             <hr>
 
 

@@ -24,7 +24,7 @@
 
             <h2>QUEL TYPE DE GUILDE ?</h2>
 
-            <p>Nous sommes comme dit dans le titre une guilde a vocation PVE (Semi HL) principalement et nous feront aussi du PVP pour ceux qui le souhaitent.</p>
+            <p>Nous sommes comme dit dans le titre une guilde a vocation PVE (Semi HL) principalement et nous ferons aussi du PVP pour ceux qui le souhaitent.</p>
 
             <p>
                 Mais qu’entends-je par semi-hl me direz vous?
