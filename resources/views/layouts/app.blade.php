@@ -47,23 +47,23 @@
                     <ul class="navbar-nav" style="margin:0 auto;">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">{{ __('ACCUEIL ') }}</a>
+                            <a class="nav-link" href="{{ route('home') }}">{{ __('ACCUEIL') }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('objectif') }}">{{ __('NOS OBJECTIFS ') }}</a>
+                            <a class="nav-link" href="{{ route('objectif') }}">{{ __('NOS OBJECTIFS') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('profil') }}">{{ __('PROFIL RECHERCHÉ ') }}</a>
+                            <a class="nav-link" href="{{ route('profil') }}">{{ __('PROFILS RECHERCHÉS') }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contact') }}">{{ __('NOUS CONTACTER ') }}</a>
+                            <a class="nav-link" href="{{ route('contact') }}">{{ __('NOUS CONTACTER') }}</a>
                         </li>
                         @auth
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('actu') }}">{{ __('ACTUALITÉ MEMBRES ') }}</a>
+                            <a class="nav-link" href="{{ route('actu') }}">{{ __('ACTUALITÉ MEMBRES') }}</a>
                         </li>
 
                         <li class="nav-item dropdown">
