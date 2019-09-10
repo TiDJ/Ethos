@@ -47,7 +47,7 @@
                     <ul class="navbar-nav" style="margin:0 auto;">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">{{ __('ACCEUIL ') }}</a>
+                            <a class="nav-link" href="{{ route('home') }}">{{ __('ACCUEIL ') }}</a>
                         </li>
 
                         <li class="nav-item">
